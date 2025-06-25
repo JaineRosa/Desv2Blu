@@ -1,0 +1,12 @@
+Olá, meu nome é Jaíne Rosa dos Santos, tenho 28 anos, sou formada em Moda pela FURB desde 2018 e atuei por mais de 10 anos como empreendedora no setor têxtil. Durante essa trajetória, desenvolvi habilidades essenciais como resolução de problemas, organização, criatividade e trabalho em equipe.
+
+Nos últimos anos, decidi realizar uma transição de carreira para a área de tecnologia, motivada pela curiosidade, desejo de aprender e vontade de aplicar minhas habilidades em novos desafios. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas pela Uniasselvi, fui aluna do programa Ada's Dev pela ProWay e participei do Entra21 EAD, onde tive a oportunidade de aprofundar meus conhecimentos em desenvolvimento e participar de projetos práticos.
+
+Hoje, com muita alegria, atuo profissionalmente na área de tecnologia. Conquistei minha primeira oportunidade na AP Controle, uma empresa especializada em sistemas de gestão de condomínios, onde trabalho com suporte técnico e implantação de sistemas. Essa experiência tem sido fundamental para aplicar o que venho aprendendo e continuar crescendo profissionalmente.
+
+Estou muito feliz em participar do programa +Devs2Blu, porque vejo como uma oportunidade incrível para me aprofundar os conhecimentos em lógica de programação, frameworks, boas práticas de desenvolvimento e aprender com profissionais experientes.
+
+Possuo conhecimentos básicos em Html, Css, Javascript, typescript, Java, Spring boot, banco de dados.
+
+Abraços,
+Jaíne
