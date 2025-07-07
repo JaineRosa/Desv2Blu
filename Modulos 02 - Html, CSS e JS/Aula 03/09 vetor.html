@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+let cores = ['Azul' , 'Amarelo', 'verde', 'rosa', 'Vermelho']
+//Exibir todas as cores
+document.write(cores)
+
+//Exibir a primeira cor
+document.write(cores[0]);
+
+//adicionar uma nova cor
+cores.push('Laranja');
+
+//remover o ultimo elemento
+cores.pop();
+
+//remover o primero registro
+cores.shift();
+
+//remover o registro em posição específica na segunda posição remove 1 item
+cores.splice(2,1);
+
+//Exibir cada cor
+for (let indice = 0; indice < cores.length; indice++) {
+    alert(cores[indice])
+    
+}
+
+</script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

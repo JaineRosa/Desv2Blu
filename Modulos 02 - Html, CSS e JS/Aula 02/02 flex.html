@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 Flex</title>
+    <style>
+        .principal{
+            background-color: aquamarine;
+            height: 400px;
+            display: flex;
+            /* Exibe o conteudo de maneira vertical e horizontal */
+            /* flex-direction: row-reverse ; */
+
+            /* Alinhamento na horizontal  */
+            /* justify-content: flex-start; */
+            /* Quebra de linha  */
+            flex-wrap: wrap;
+
+            /* justify-content: space-evenly; */
+
+            /* alinhamento na vertical */
+            align-items: flex-start;
+        }
+        .bloco{
+            background-color: rgb(39, 5, 108);
+            width: 100px;
+            height: 100px;
+            margin: 2px;
+            color: wheat;
+        }
+
+    
+    </style>
+
+</head>
+<body>
+
+    <!-- div.principal>div.bloco{$}*10 -->
+    <div class="principal">
+        <div class="bloco">1</div>
+        <div class="bloco">2</div>
+        <div class="bloco">3</div>
+        <div class="bloco">4</div>
+        <div class="bloco">5</div>
+        <div class="bloco">6</div>
+        <div class="bloco">7</div>
+        <div class="bloco">8</div>
+        <div class="bloco">9</div>
+        <div class="bloco">10</div>
+    </div>
+
+
+</body>
+</html>

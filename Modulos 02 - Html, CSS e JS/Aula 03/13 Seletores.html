@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <p class="texto">a</p>
+        <p class="texto">b</p>
+        <p id="texto">c</p>
+
+        <script>
+            //modifica elemento via classe
+            document.getElementsByClassName('texto')[0].innerText = 'Modificar texto'
+            document.getElementsByClassName('texto')[1].innerText = 'Segundo parágrafo'
+
+            //Modificar elementos via id
+           // document.getElementById('texto').innerText = 'Modificar texto via Id'
+
+           let texto = document.getElementById('texto');
+           texto.innerText = 'Modificar texto via Id';
+           texto.style.color = 'red';
+           texto.style.fontSize = '24px';
+        </script>
+</body>
+</html>

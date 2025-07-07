@@ -8,6 +8,7 @@ public class exercicios {
         Scanner scan = new Scanner(System.in);
         notas(scan);
         senha(scan);
+        validador(scan);
     }
 
     public static void notas(Scanner scan){
@@ -45,30 +46,56 @@ public class exercicios {
 
         System.out.println("Informe o seu nome: ");
         String nome = scan.next();
-        while (nome.length() <= 3){
+        if (nome.length() <= 3){
             System.out.println("Nome inválido! Seu nome deve ter mais de 3 letras.");
             System.out.println("Digite novamente: ");
             nome = scan.next();
         }
-        System.out.println("Nome válido");
 
         System.out.println("Informe a sua idade: ");
         int idade = scan.nextInt();
-        while (idade < 0 || idade > 150){
+        if (idade < 0 || idade > 150){
             System.out.println("Idade inválida\nInforme a sua idade: ");
             idade = scan.nextInt();
         }
-        System.out.println("Idade válido");
 
         System.out.println("Informe o seu salário:");
         double salario = scan.nextDouble();
-        while (salario <= 0){
+        if (salario <= 0){
             System.out.println("Salário Inválido\n Informe o seu salário");
             salario = scan.nextDouble();
         }
-        System.out.println("Salário válido");
+
+        System.out.println("Informe o seu sexo M(Masculino) ou F(Feminino):");
+        String sexo = scan.next();
+        String sexoencontrado = "";
+        if (sexo.equalsIgnoreCase("F")){
+            sexoencontrado = "Feminino";
+        } else if (sexo.equalsIgnoreCase("M")) {
+            sexoencontrado = "Masculino";
+        } else {
+            System.out.println("Valor inválido");
+        }
+
+        System.out.println("Estado Civil\n- C Casado\n- S Solteiro\n- D Divorciado\n- V Viuvo");
+        String estadoCivil = scan.next();
+        String estado = "";
+        if (estadoCivil.equalsIgnoreCase("s")){
+           estado ="Você é solteiro(a)";
+        } else if (estadoCivil.equalsIgnoreCase("c")) {
+            estado = "Você é casado(a)";
+        } else if (estadoCivil.equalsIgnoreCase("d")) {
+            estado ="Você é divorciado(a)";
+        } else if (estadoCivil.equalsIgnoreCase("v")) {
+            estado = "Você é viuvo(a)";
+        }else {
+            System.out.println("Entrada inválida");
+        }
+        System.out.println("Seu nome é " + nome + " você tem " + idade + " anos. Seu salário é de R$" + salario+
+                ". Você é do sexo " + sexoencontrado+ " e é " + estado );
 
 
     }
+
 
 }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="formulario" onsubmit="return enviar()">
+        <input type="text" name="" id=" " placeholder="Nome">
+        <input type="text" name="" id=" " placeholder="Cidade">
+        <input type="submit" value="Enviar">
+    </form>
+
+    <h1 id = "Nome"></h1>
+    <h1 id = "Cidade"></h1>
+
+    <script>
+        const enviar = () => {
+            //Obter o elemento form
+
+            let formulario = document.getElementById('formulario')
+
+            //extrair os inputs
+            let campos = document.getElementsByTagName('input')
+
+            //selecionar os H1s  e enviar o valor de cada input
+            document.getElementById('Nome').innerText = campos[0].value;
+            document.getElementById('Cidade').innerText = campos[1].value;
+
+            console.log(formulario);
+
+            //retorno
+            return false;
+            
+        }
+    </script>
+    
+</body>
+</html>

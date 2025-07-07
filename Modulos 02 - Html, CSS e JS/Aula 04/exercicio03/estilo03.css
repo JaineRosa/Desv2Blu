@@ -1,0 +1,32 @@
+.principal {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+button, input{
+    padding: 8px;
+    text-align: center;
+    border-radius: 6px;
+    border: solid 1px rgb(199, 199, 199);
+}
+button:hover{
+    background-color: #6c6c6c;
+    color: white;
+}
+button{
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: rgb(197, 196, 196);
+ 
+}
+div{
+    margin: auto;
+    margin-top: 15%;
+}
+.reiniciar{
+    display: none;
+}
