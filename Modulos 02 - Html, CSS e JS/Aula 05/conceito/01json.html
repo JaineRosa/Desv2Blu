@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //JSON 
+        let pessoa = {
+            nome: 'Alice',
+            idade: 32,
+            cidade: 'Curitiba'
+        }
+        //Vatiavel armazenando o JSON em texto
+        let pessoaTXT = JSON.stringify(pessoa);
+
+        //variavel armazenando um JSON convertido
+        let pessoaJSON = JSON.parse(pessoaTXT);
+
+        //Console
+        console.log(pessoaJSON);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <form>
+        <h1>Cadastro de Endereço</h1>
+      <input type="text" class="form-control" id="id" style="display: none;" readonly />
+  
+      <label for="nome">Nome:</label>
+      <input type="text" class="form-control" id="nome" placeholder="Informe o nome" />
+  
+      <label for="cep">CEP:</label>
+      <input type="text" class="form-control" id="cep" placeholder="Informe o CEP" onblur="buscarCep()"/>
+  
+      <label for="estado">Estado:</label>
+      <input type="text" class="form-control" id="estado" placeholder="Estado" readonly />
+  
+      <label for="bairro">Bairro:</label>
+      <input type="text" class="form-control " id="bairro" placeholder="Bairro" readonly />
+  
+      <label for="cidade">Cidade:</label>
+      <input type="text" class="form-control " id="cidade" placeholder="Cidade" readonly />
+  
+      <label for="logradouro">Logradouro:</label>
+      <input type="text" class="form-control" id="logradouro" placeholder="Logradouro" readonly />
+  
+      <div>
+        <button type="button" class="btn btn-success" id="btnCadastrar" onclick="cadastrar()">Cadastrar</button>
+        <button type="button" class="btn btn-primary" id="btnAlterar" onclick="editar()" style="display: none;">Alterar</button>
+      </div>
+    </form>
+  
+    <table class="table table-striped table-bordered mt-4">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>CEP</th>
+          <th>Estado</th>
+          <th>Bairro</th>
+          <th>Cidade</th>
+          <th>Logradouro</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabela"></tbody>
+    </table>
+  
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

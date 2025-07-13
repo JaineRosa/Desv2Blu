@@ -1,0 +1,76 @@
+{
+  "cadastros": [
+    {
+      "nome": "Jaíne Rosa dos Santos",
+      "cep": "89040100",
+      "estado": "SC",
+      "bairro": "Velha",
+      "cidade": "Blumenau",
+      "logradouro": "Rua Renato de Barba",
+      "id": "7599"
+    },
+    {
+      "id": "e8d4",
+      "nome": "Jaine",
+      "cep": "89040140",
+      "estado": "SC",
+      "bairro": "Velha Central",
+      "cidade": "Blumenau",
+      "logradouro": "Rua Ezequiel de Souza"
+    },
+    {
+      "id": "edf4",
+      "nome": "jaine",
+      "cep": "89040200",
+      "estado": "SC",
+      "bairro": "Velha Central",
+      "cidade": "Blumenau",
+      "logradouro": "Rua Itororó"
+    },
+    {
+      "id": "ebdc",
+      "nome": "Jaíne Rosa dos Santos",
+      "cep": "89040120",
+      "estado": "SC",
+      "bairro": "Velha Central",
+      "cidade": "Blumenau",
+      "logradouro": "Rua Franz Hadlich"
+    },
+    {
+      "id": "89a2",
+      "nome": "lucia",
+      "cep": "89040120",
+      "estado": "SC",
+      "bairro": "Velha",
+      "cidade": "Blumenau",
+      "logradouro": "Rua Anna Germer"
+    },
+    {
+      "id": "42e4",
+      "nome": "VILMAR ROSA",
+      "cep": "89040180",
+      "estado": "Santa Catarina",
+      "bairro": "Velha Central",
+      "cidade": "Blumenau",
+      "logradouro": "Rua Franz Hadlich"
+    },
+    {
+      "id": "fc46",
+      "nome": "Jaine",
+      "cep": "89040180",
+      "estado": "Santa Catarina",
+      "bairro": "Velha Central",
+      "cidade": "Blumenau",
+      "logradouro": "Rua Franz Hadlich"
+    },
+    {
+      "id": "ded3",
+      "nome": "VILMAR ROSA",
+      "cep": "89040180",
+      "estado": "Santa Catarina",
+      "bairro": "Velha Central",
+      "cidade": "Blumenau",
+      "logradouro": "Rua Franz Hadlich"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "produto": [
+    {
+      "id": "f38c",
+      "Nome": "TV",
+      "marca": "Sansung",
+      "valor": 1299
+    },
+    {
+      "nome": "notebook",
+      "marca": "dell",
+      "valor": 3600,
+      "id": "8293"
+    },
+    {
+      "nome": "Galaxy S25",
+      "marca": "Sansung",
+      "valor": 6850,
+      "id": "60aa"
+    },
+    {
+      "nome": "Galaxy S25",
+      "marca": "Sansung",
+      "valor": 6850,
+      "id": "a948"
+    }
+  ]
+}
