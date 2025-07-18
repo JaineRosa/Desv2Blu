@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+      <div class="form-box">
+        <h2>Formulário</h2>
+        <form id="formPessoa">
+        <input type="hidden" id="idPessoa" />
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+          <label for="idade">Idade:</label>
+          <input type="number" id="idade" name="idade" required>
+          <button type="submit" onclick="Cadastrar()">Cadastrar</button>
+        </form>
+      </div>
+   
+      <div class="tabela">
+        <table class="table table-striped table-bordered mt-4" border="1">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Nome</th>
+              <th>Idade</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tabela"></tbody>
+        </table>
+      </div>
+    </div>
+  
+    <script src="script.js"></script>
+  </body>
+</html>

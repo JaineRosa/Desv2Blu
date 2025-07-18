@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.form-box,
+.tabela {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #a1028e;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #b3007d;
+}
+
+.botaomenor {
+    margin-top: 2px;
+    padding: 2px 16px;
+    background-color: #a1028e;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+    font-size: 16px;
+}
+
+.botaomenor:hover {
+    background-color: #b3007d;
+}
+
+.acoes {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.tabela {
+    width: 100%;
+    max-width: 800px;
+}
+
+.tabela table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.tabela th{
+padding: 8px;
+border: 1px solid #e1e1e1;
+}
+.tabela td {
+    padding: 4px;
+    text-align: center;
+    border: 1px solid #e1e1e1;
+}
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #28a745;
+    color: white;
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s, transform 0.4s;
+    z-index: 1000;
+}
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    /*sessionStorage - dados disponiveis até que o navegafor seja fechado/finalizado
+    localStorage -  dados ficam disponiveis até que o navegador seja "limpo"*/
+
+    //Criar nome
+    localStorage.setItem('nome', 'Jaíne');
+    
+    //exibir nome
+    document.write(localStorage.getItem('nome'))
+
+    //remover o nome
+    localStorage.removeItem('nome')
+
+    //remover todas as chaves
+    localStorage.clear()
+</script>
+
+</body>
+</html>

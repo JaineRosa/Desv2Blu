@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        //Criar Promisse
+        const minhaPromise = new Promise((resolve, reject) => {
+            //Constante de ação
+            const acao = true;
+
+            //intervalo
+            setInterval(() => {
+                //condicional
+                if (acao) {
+                    //Resolução
+                    resolve('Promessa resolvida');
+                } else {
+                    //Rejeição
+                    reject('Promessa rejeitada');
+                }
+            }, 2000); //executa somente após 2segundos
+        });
+
+        //executar minha promise
+        minhaPromise
+            .then((retorno) => console.log(retorno))//se der certo, pode ter varios then
+            .catch((retorno) => console.log(retorno))// se der erro, somente um catch por promise
+            .finally(() => console.log('Fim da execução da promisse'))//executa independente do resultado, somente um finally por promise
+
+
+    </script>
+</body>
+
+</html>

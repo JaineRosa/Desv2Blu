@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // 1ª promise
+        const promise1 = new Promise((resolve, reject) => {
+            //contante de açao
+            const acao = true;
+            //intervalo
+            setTimeout(() => {
+                //condicional]
+                if (acao) {
+                    //resolve
+                    resolve('1ª promise realizada com sucesso');
+                } else {
+                    //reject
+                    reject('1ª promise com falha');
+                }
+            }, 2000);
+        });
+
+        // 2ª promise
+        const promise2 = new Promise((resolve, reject) => {
+            //contante de açao
+            const acao = true;
+            //intervalo
+            setTimeout(() => {
+                //condicional]
+                if (acao) {
+                    //resolve
+                    resolve('2ª promise realizada com sucesso');
+                } else {
+                    //reject
+                    reject('2ª promise com falha');
+                }
+            }, 4000);
+        });
+
+        // 3ª promise
+        const promise3 = new Promise((resolve, reject) => {
+            //contante de açao
+            const acao = true;
+            //intervalo
+            setTimeout(() => {
+                //condicional]
+                if (acao) {
+                    //resolve
+                    resolve('3ª promise realizada com sucesso');
+                } else {
+                    //reject
+                    reject('3ª promise com falha');
+                }
+            }, 6000);
+        });
+
+        //executar todas as promise
+        Promise.all([promise1, promise2, promise3])
+            .then((retornos) => console.log(retornos))
+            .catch((retornos) => console.log(retornos))
+            .finally(() => console.log('Todas as promises foram executadas'))
+
+    </script>
+</body>
+
+</html>
