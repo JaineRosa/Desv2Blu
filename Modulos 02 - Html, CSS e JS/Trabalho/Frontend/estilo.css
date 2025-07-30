@@ -9,6 +9,56 @@ div {
     margin: 0 auto;
 }
 
+.banner-topo {
+    text-align: center;
+    margin-top: -30px;
+    font-size: 16px;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.btn-entrar {
+    margin-left: 8px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-entrar:hover {
+    background-color: #45a049;
+}
+
+.carrinho-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.badge {
+    position: absolute;
+    top: 8px;
+    right: 30px;
+    background-color: red;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.botaoInicio{
+    background-color: #f9f6ee;
+    border: none;
+    text-decoration: none;
+    color: #508830;
+    font-weight: bold;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: -100px;
+    font-size: 18px;
+}
+
 main {
     margin-top: 150px;
     margin-left: 250px;
@@ -101,7 +151,7 @@ header {
     justify-content: center;
     align-items: center;
     display: flex;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .pesquisa input {
@@ -178,7 +228,7 @@ footer {
     margin-left: 200px;
     padding: 4px;
     bottom: 0;
-    width: 100%;      
+    width: 100%;
 }
 
 footer p {
@@ -215,4 +265,41 @@ footer p {
 
 .total button:hover {
     background: #1c581c;
+}
+
+#form-produto {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    align-items: center;
+    background-color: #f9f6ee;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.15);
+}
+
+#form-produto input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#form-produto select {
+    width: 96%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#form-produto button {
+    background-color: #508830;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 8px;
+    border-radius: 4px;
+    cursor: pointer;
 }

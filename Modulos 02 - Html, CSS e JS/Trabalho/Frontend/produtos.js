@@ -6,7 +6,7 @@ const mostrarProdutosDiv = document.getElementById('produtos-mostrar');
 const mostrarCarrinhoDiv = document.getElementById('mostrarCarrinho');
 const botaoCarrinho = document.getElementById('carrinho');
 const cadastrarProdutoDiv = document.getElementById('cadastrarProduto');
-
+const contador = document.getElementById('carrinho-contador');
 
 // Carrinho armazenado em memória
 let carrinho = [];
@@ -31,6 +31,7 @@ function mostrarProdutosTodos() {
 
 // Buscar produtos por categoria
 async function buscarPorCategoria(categoria) {
+    cadastrarProdutoDiv.style.display = 'none'
     mostrarCarrinhoDiv.style.display = 'none';
     mostrarProdutosDiv.style.display = 'flex';
     try {
@@ -43,6 +44,7 @@ async function buscarPorCategoria(categoria) {
 }
 // Função para buscar pelo nome
 function buscar(event) {
+    cadastrarProdutoDiv.style.display = 'none'
     mostrarCarrinhoDiv.style.display = 'none';
     mostrarProdutosDiv.style.display = 'flex';
     event.preventDefault();
@@ -133,6 +135,7 @@ async function adicionarAoCarrinho(id) {
         }
 
         alert(`Produto "${produto.nome}" adicionado ao carrinho!`);
+        atualizarContadorCarrinho();
     } catch (err) {
         console.error('Erro ao adicionar ao carrinho:', err);
     }
@@ -140,6 +143,7 @@ async function adicionarAoCarrinho(id) {
 
 // Mostrar o carrinho na tela
 function mostrarCarrinho() {
+    cadastrarProdutoDiv.style.display = 'none'
     mostrarProdutosDiv.style.display = 'none';
     mostrarCarrinhoDiv.style.display = 'flex';
 
@@ -178,6 +182,7 @@ function mostrarCarrinho() {
 }
 // Atualizar quantidade do item no carrinho
 function atualizarQuantidadeCarrinho(index, novaQtd) {
+     cadastrarProdutoDiv.style.display = 'none'
     const quantidade = parseInt(novaQtd);
 
     const item = carrinho[index];
@@ -191,12 +196,22 @@ function atualizarQuantidadeCarrinho(index, novaQtd) {
 
 // Remover item do carrinho pelo índice
 function removerDoCarrinho(index) {
+     cadastrarProdutoDiv.style.display = 'none'
     carrinho.splice(index, 1);
-    mostrarCarrinho();
+    if (carrinho.length === 0) {
+        mostrarCarrinhoDiv.innerHTML = '<p>Carrinho vazio.</p>';
+        setTimeout(() => {
+            mostrarProdutosTodos();;
+        }, 2000);
+        return;
+    } else {
+        mostrarCarrinho();
+    }
 }
 
 //finalizar compra
 function finalizarCompra() {
+     cadastrarProdutoDiv.style.display = 'none'
     if (carrinho.length === 0) {
         alert('Seu carrinho está vazio!');
         return;
@@ -266,7 +281,7 @@ function salvarProduto(evento) {
     evento.preventDefault();
 
     const nome = document.getElementById('nome').value;
-    const preco = document.getElementById('preco').value.replace(',', '.'); 
+    const preco = document.getElementById('preco').value.replace(',', '.');
     const unidade = document.getElementById('unidade').value;
     const categoria = document.getElementById('categoria').value;
     const estoque = document.getElementById('estoque').value;
@@ -284,12 +299,13 @@ function salvarProduto(evento) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(novoProduto) // transforma o objeto em texto JSON
+        body: JSON.stringify(novoProduto)
     })
         .then(resposta => {
             if (resposta.ok) {
                 alert('Produto cadastrado com sucesso!');
                 mostrarProdutosTodos();
+                cadastrarProdutoDiv.style.display = 'none';
             } else {
                 alert('Erro ao cadastrar produto.');
             }
@@ -300,8 +316,17 @@ function salvarProduto(evento) {
         });
 }
 
+function atualizarContadorCarrinho() {
+    const contador = document.getElementById('carrinho-contador');
+    const totalItens = carrinho.reduce((soma, item) => soma + item.quantidade, 0);
+    contador.textContent = totalItens;
+    contador.style.display = totalItens > 0 ? 'inline-block' : 'none';
+}
 // Evento botão carrinho
 botaoCarrinho.addEventListener('click', mostrarCarrinho);
 
 // Carregar produtos ao iniciar página
-window.onload = buscarProdutos;
+window.onload = () => {
+  atualizarContadorCarrinho();
+  buscarProdutos();
+};

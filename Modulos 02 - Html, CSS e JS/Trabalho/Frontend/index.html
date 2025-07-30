@@ -10,18 +10,35 @@
 </head>
 
 <body>
+
     <header>
         <img src="img/Feira-online.png" alt="Feira Online Logo" class="logo">
 
-        <form class="pesquisa" onsubmit="buscar(event)">
-            <input type="text" id="campoPesquisa" placeholder="Digite o nome do produto">
-            <button type="submit">Buscar</button>
-        </form>
+        <div>
+            <div class="banner-topo">
+                🥕 Produtos fresquinhos direto da roça para a sua mesa!
+            </div>
+            <form class="pesquisa" onsubmit="buscar(event)">
+                <input type="text" id="campoPesquisa" placeholder="Digite o nome do produto">
+                <button type="submit">Buscar</button>
+            </form>
+            <div>
+                <button class="botaoInicio">Início</button>
+                <button class="botaoInicio">Sobre</button>
+                <button class="botaoInicio">Contato</button>
+            </div>
+
+        </div>
 
         <div class="icones">
-            <i class="bi bi-basket2" id="carrinho" onclick="mostrarCarrinho()"></i>
-            <i class="bi bi-person-circle"></i>
+            <div class="carrinho-wrapper" onclick="mostrarCarrinho()">
+                <i class="bi bi-basket2" id="carrinho"></i>
+                <span class="badge" id="carrinho-contador"></span>
+            </div>
+            <i class="bi bi-person-circle" id="perfil"></i>
+            <a href="#" class="btn-entrar">Entrar</a>
         </div>
+
     </header>
 
     <div>
@@ -33,7 +50,7 @@
             <button onclick="buscarPorCategoria('temperos')">Temperos</button>
             <button onclick="mostrarProdutosTodos()">Todos os Produtos</button>
             <button onclick="cadastrarProduto()">Cadastrar Produtos</button>
-            <button></button>
+            <button>Cadastrar Categorias</button>
         </nav>
     </div>
 
@@ -50,7 +67,7 @@
     </footer>
 
 
-  
+
 
     <script src="produtos.js"></script>
 </body>
