@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    !<!-- Formulario-->
+    <form onsubmit="upload(event)">
+        <input type="file" id="arquivo">
+        <input type="submit" value="Realizar Upload">
+    </form>
+
+    <!--paragrafo-->
+    <p id="mensagem"></p>
+
+    <script>
+        const upload = async (event) => {
+            //evita a atualização da pagina (refresh)
+            event.preventDefault();
+
+            //extrair arquivo enviado
+            const arquivo = document.getElementById('arquivo').files[0];
+
+            //Estrutura FormData
+            const formData = new FormData();
+            formData.append('arquivo', arquivo);
+            
+            //obter o elemento de paragrafo
+            const mensagem = document.getElementById('mensagem');
+
+            //try - cat
+            try {
+                 const requisicao = await fetch('http://localhost:8080',{
+                    method: 'POST',
+                    body: formData
+                 })
+                 const retorno = await requisicao.json();
+
+               mensagem.innerText = retorno.mensagem;
+            } catch (error) {
+              mensagem.innerText = 'Falha ao realizar upload'
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
