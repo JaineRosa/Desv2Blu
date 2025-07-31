@@ -179,6 +179,7 @@ function mostrarCarrinho() {
         <h3> Valor Total:<br> R$ ${total.toFixed(2)}</h3>
         <button onclick="finalizarCompra()" style="margin-top:12px;padding:10px 24px;background:#508830;color:#fff;border:none;border-radius:6px;cursor:pointer;">Finalizar Compra</button>
     </div>`;
+    
 }
 // Atualizar quantidade do item no carrinho
 function atualizarQuantidadeCarrinho(index, novaQtd) {
@@ -192,12 +193,14 @@ function atualizarQuantidadeCarrinho(index, novaQtd) {
     }
     carrinho[index].quantidade = quantidade;
     mostrarCarrinho();
+    atualizarContadorCarrinho();
 }
 
 // Remover item do carrinho pelo índice
 function removerDoCarrinho(index) {
      cadastrarProdutoDiv.style.display = 'none'
     carrinho.splice(index, 1);
+    atualizarContadorCarrinho();
     if (carrinho.length === 0) {
         mostrarCarrinhoDiv.innerHTML = '<p>Carrinho vazio.</p>';
         setTimeout(() => {
@@ -227,11 +230,13 @@ function finalizarCompra() {
             },
             body: JSON.stringify({ estoque: item.estoque - item.quantidade })
         })
-            .catch(err => console.error('Erro ao atualizar estoque:', err));
+        .then(() => buscarProdutos())
+        .catch(err => console.error('Erro ao atualizar estoque:', err));
     });
 
     carrinho = [];
     mostrarCarrinho();
+    atualizarContadorCarrinho();
 
 
     // redirecionar para a página de produtos apos 3s
@@ -319,6 +324,7 @@ function salvarProduto(evento) {
 function atualizarContadorCarrinho() {
     const contador = document.getElementById('carrinho-contador');
     const totalItens = carrinho.reduce((soma, item) => soma + item.quantidade, 0);
+    console.log('Total de itens no carrinho:', totalItens);
     contador.textContent = totalItens;
     contador.style.display = totalItens > 0 ? 'inline-block' : 'none';
 }
